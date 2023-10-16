@@ -24,7 +24,6 @@ public class Timer : MonoBehaviour
             string seconds = (t % 60).ToString("f2");
             timerText.text = minutes + ":" + seconds;
         }
-        //timerText.text = "HighScore :" + bestTime.ToString();
     }
     public void StartTimer()
     {
