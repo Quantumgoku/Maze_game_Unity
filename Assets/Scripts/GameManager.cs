@@ -54,9 +54,6 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         CheckPlayerPosition();
-        //Debug.Log("Player Location: " + playerInstance.playerLocation());
-        //Debug.Log("Random End Point: " + randomEndPoint());
-
         if (Input.GetKeyDown(KeyCode.KeypadEnter))
         {
             restartGame();
@@ -83,9 +80,6 @@ public class GameManager : MonoBehaviour
 
     public void beginGame(MazeRenderer mazeRenderer)
     {
-        //mazeRendererInstance = Instantiate(mazeRenderer) as MazeRenderer;
-        //var maze = MazeGenerator.Generate(width, height);
-        //mazeRenderer.Draw(maze);
         generatedMaze = MazeGenerator.Generate(width, height);
         mazeRenderer.Draw(generatedMaze);
         correctEndPoint = randomEndPoint();
